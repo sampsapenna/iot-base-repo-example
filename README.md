@@ -5,7 +5,8 @@ Repository contains `pico-sdk` as a submodule. After cloning the
 repository, run the following:
 
 ```
-git submodule init && git submodule foreach "git submodule update --init"
+git submodule update --init
+git submodule foreach "git submodule update --init"
 ```
 
 ## Usage
