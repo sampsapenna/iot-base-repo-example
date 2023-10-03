@@ -4,6 +4,8 @@
 #include <stdio.h>
 #include "pico/stdlib.h"
 
+// Code autoformatted with clang-format, through VSCode.
+
 int setup()
 {
 	// Set up stdio
