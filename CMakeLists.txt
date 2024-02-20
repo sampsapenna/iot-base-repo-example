@@ -18,7 +18,11 @@ add_executable(iot_base_repo_example
 	serial_hello.c
 )
 
-target_link_libraries(iot_base_repo_example pico_stdlib)
+add_subdirectory("add_lib")
+target_include_directories(simple_maths PUBLIC "add_lib")
+target_link_directories(simple_maths PUBLIC "add_lib")
+
+target_link_libraries(iot_base_repo_example pico_stdlib simple_maths)
 
 pico_enable_stdio_usb(iot_base_repo_example 1)
 pico_enable_stdio_uart(iot_base_repo_example 0)
